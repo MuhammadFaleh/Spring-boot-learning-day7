@@ -49,7 +49,7 @@ public class TeacherController {
     }
 
     @PostMapping("/create-teachers")
-    public ResponseEntity<?> createStudents(@RequestBody @Valid TeacherModel teacher, Errors errors){
+    public ResponseEntity<?> createTeachers(@RequestBody @Valid TeacherModel teacher, Errors errors){
         if(errors.hasErrors()){
             return ResponseEntity.status(400).body(new ApiResponse(errors.getFieldError().getDefaultMessage()));
         }
