@@ -13,6 +13,7 @@ public class StudentModel {
     private String id;
     @NotBlank(message = "student name should not be empty")
     @Size(min=3, max = 40, message = "name should be between 3 and 40")
+    @Pattern(regexp = "^[A-Za-z]*$", message = "student name should be only english letters")
     private String name;
     @NotNull(message = "age should not be empty")
     @Min(value = 10, message = "age should not younger than 10")
