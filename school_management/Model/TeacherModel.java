@@ -13,6 +13,7 @@ public class TeacherModel {
     private String id;
     @NotBlank(message = "name should not be empty")
     @Size(min=3, max = 40, message = "name should be between 3 and 40")
+    @Pattern(regexp = "^[A-Za-z]*$", message = "teacher name should be only english letters")
     private String name;
     @NotNull(message = "salary should not be empty")
     @Positive(message = "salary should be a positive number")
